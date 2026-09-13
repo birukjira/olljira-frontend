@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 240">
+  <!-- diagonal signal stripes, navy with orange accents (OllJira) -->
+  <g stroke-width="4" fill="none">
+    <g stroke="#0B2E4F" opacity="0.5">
+      <line x1="40" y1="-20" x2="320" y2="260"/>
+      <line x1="60" y1="-20" x2="340" y2="260"/>
+      <line x1="80" y1="-20" x2="360" y2="260"/>
+      <line x1="120" y1="-20" x2="400" y2="260"/>
+      <line x1="140" y1="-20" x2="420" y2="260"/>
+      <line x1="160" y1="-20" x2="440" y2="260"/>
+      <line x1="200" y1="-20" x2="480" y2="260"/>
+      <line x1="220" y1="-20" x2="500" y2="260"/>
+      <line x1="240" y1="-20" x2="520" y2="260"/>
+    </g>
+    <g stroke="#F28C28" opacity="0.9">
+      <line x1="100" y1="-20" x2="380" y2="260"/>
+      <line x1="180" y1="-20" x2="460" y2="260"/>
+      <line x1="260" y1="-20" x2="540" y2="260"/>
+    </g>
+  </g>
+</svg>

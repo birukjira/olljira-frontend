@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 22% 96.5%;          /* Cloud White #F4F6F8 */
+    --foreground: 210 30% 14.5%;          /* Ink #1A2530 */
+    --card: 0 0% 100%;
+    --card-foreground: 210 30% 14.5%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 30% 14.5%;
+    --primary: 209 76% 17.6%;             /* OllJira Navy #0B2E4F */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 22% 92%;
+    --secondary-foreground: 209 76% 17.6%;
+    --muted: 210 22% 92%;
+    --muted-foreground: 212 10% 46.7%;     /* Slate Gray #6B7683 */
+    --accent: 30 89% 55.3%;               /* Signal Orange #F28C28 */
+    --accent-foreground: 209 76% 14%;
+    --destructive: 8 67% 45%;
+    --destructive-foreground: 11 85% 97%;
+    --border: 210 20% 87%;
+    --input: 210 20% 87%;
+    --ring: 30 89% 55.3%;
+    --radius: 0.625rem;
+  }
+
+  .dark {
+    --background: 209 76% 12%;
+    --foreground: 209 24% 83%;
+    --card: 209 60% 16%;
+    --card-foreground: 209 24% 83%;
+    --popover: 209 60% 16%;
+    --popover-foreground: 209 24% 83%;
+    --primary: 30 89% 55.3%;
+    --primary-foreground: 209 76% 12%;
+    --secondary: 209 40% 22%;
+    --secondary-foreground: 209 24% 83%;
+    --muted: 209 40% 22%;
+    --muted-foreground: 209 24% 65%;
+    --accent: 30 89% 55.3%;
+    --accent-foreground: 209 76% 12%;
+    --destructive: 9 71% 59%;
+    --destructive-foreground: 13 100% 97%;
+    --border: 209 35% 24%;
+    --input: 209 35% 24%;
+    --ring: 30 89% 55.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: clip;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Liter', Arial, Helvetica, ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Montserrat', 'Product Sans', Arial, ui-sans-serif, sans-serif;
+    font-weight: 700;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .ease-ui-out {
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+/* ---------- Team detail entrance ---------- */
+@keyframes team-detail-in {
+  from { opacity: 0; transform: translateY(15px); filter: blur(4px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.animate-team-detail {
+  animation: team-detail-in 0.3s ease-out 0.15s both;
+}
+
+/* ---------- Logo marquee ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 36s linear infinite;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* ---------- Dotted background (matches original: spacing 24, opacity .25) ---------- */
+.bg-dots {
+  background-image: radial-gradient(circle, hsl(var(--primary) / 0.25) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* ---------- Floating Amharic letters ---------- */
+@keyframes amharic-float {
+  0% { opacity: 0; transform: translateY(12px) scale(0.5); }
+  15% { opacity: 1; transform: translateY(0) scale(1); }
+  80% { opacity: 1; transform: translateY(-18px) scale(1); }
+  100% { opacity: 0; transform: translateY(-28px) scale(0.6); }
+}
+.amharic-letter {
+  position: absolute;
+  animation: amharic-float linear infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------- Reveal animations ---------- */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+@keyframes fade-in-left {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-fade-in-left {
+  animation: fade-in-left 0.6s ease-out both;
+}
+
+/* ---------- Accordion ---------- */
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+/* ---------- Slow zoom for hero mockups ---------- */
+@keyframes slow-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.025); }
+}
+
+/* ---------- Shine text (BookACall CTA) ---------- */
+@keyframes shine {
+  from { background-position: 200% center; }
+  to { background-position: -200% center; }
+}
+.animate-shine {
+  animation: shine 5s linear infinite;
+}
+
+/* ---------- Plus-pattern overlay (BookACall CTA) ---------- */
+.bg-plus-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* ---------- Footer giant text flip ---------- */
+@keyframes footer-flip-in {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}

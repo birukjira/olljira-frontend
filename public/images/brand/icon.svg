@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- OllJira hub mark: navy ring, 4 nodes, spokes, orange hub -->
+  <!-- spokes: inner ring edge (r=42) to nodes -->
+  <g stroke="#0B2E4F" stroke-width="6">
+    <line x1="129.7" y1="70.3" x2="159.6" y2="40.4"/>
+    <line x1="129.7" y1="129.7" x2="159.6" y2="159.6"/>
+    <line x1="70.3" y1="129.7" x2="40.4" y2="159.6"/>
+    <line x1="70.3" y1="70.3" x2="40.4" y2="40.4"/>
+  </g>
+  <!-- navy donut ring: outer r=80, inner r=42 -->
+  <path fill="#0B2E4F" fill-rule="evenodd" d="M100 20a80 80 0 1 1 0 160 80 80 0 0 1 0-160zm0 38a42 42 0 1 1 0 84 42 42 0 0 1 0-84z"/>
+  <!-- notch cuts on the ring at the 4 diagonals -->
+  <g fill="#ffffff">
+    <rect x="148" y="18" width="34" height="34" rx="6" transform="rotate(45 165 35)"/>
+    <rect x="148" y="148" width="34" height="34" rx="6" transform="rotate(45 165 165)"/>
+    <rect x="18" y="148" width="34" height="34" rx="6" transform="rotate(45 35 165)"/>
+    <rect x="18" y="18" width="34" height="34" rx="6" transform="rotate(45 35 35)"/>
+  </g>
+  <!-- redraw spoke stubs through the notches -->
+  <g stroke="#0B2E4F" stroke-width="5">
+    <line x1="151.7" y1="48.3" x2="159.6" y2="40.4"/>
+    <line x1="151.7" y1="151.7" x2="159.6" y2="159.6"/>
+    <line x1="48.3" y1="151.7" x2="40.4" y2="159.6"/>
+    <line x1="48.3" y1="48.3" x2="40.4" y2="40.4"/>
+  </g>
+  <!-- outer nodes (8.7% of 200 diameter => r=8.7) -->
+  <g fill="#0B2E4F">
+    <circle cx="164.8" cy="35.2" r="8.7"/>
+    <circle cx="164.8" cy="164.8" r="8.7"/>
+    <circle cx="35.2" cy="164.8" r="8.7"/>
+    <circle cx="35.2" cy="35.2" r="8.7"/>
+  </g>
+  <!-- orange hub: 20% of ring diameter (r=16) -->
+  <circle cx="100" cy="100" r="16" fill="#F28C28"/>
+</svg>
