@@ -354,10 +354,10 @@ const teamMembers = [
     bio: 'Biruk founded OllJira after years of building networks and software across Ethiopia — from a nine-floor hospital network in Addis Ababa to CCTV on the country\u2019s largest tractor assembly line. CCNA and Hikvision certified, he also builds production software in Go, Node.js, and React. His rule is simple: if it is not tested, labeled, and documented, the job is not done.',
   },
   {
-    id: 'hanna',
-    name: 'Hanna Bekele',
+    id: 'hawi',
+    name: 'Hawi Abetu',
     role: 'Operations and Support Lead',
-    image: '/images/team/hanna.webp',
+    image: '/images/team/hawi.webp',
     crop: 'object-[50%_15%]',
     imageScale: 1,
     socialLinks: {
@@ -365,7 +365,7 @@ const teamMembers = [
       linkedin: 'https://www.linkedin.com/company/olljira',
       telegram: 'https://t.me/olljira',
     },
-    bio: 'Hanna runs scheduling, documentation, and warranty support at OllJira. She is the reason quotes arrive within 48 hours of a survey, handover folders are complete, and warranty callouts get answered the same day — the operational half of "done once, done right, documented".',
+    bio: 'Hawi runs scheduling, documentation, and warranty support at OllJira. She is the reason quotes arrive within 48 hours of a survey, handover folders are complete, and warranty callouts get answered the same day — the operational half of "done once, done right, documented".',
   },
 ];
 
