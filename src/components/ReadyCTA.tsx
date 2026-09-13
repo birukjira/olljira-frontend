@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { Mail, MapPin, MessageSquare, Phone, X, Zap } from 'lucide-react';
 
 const ORG = {
-  phoneDisplay: '+251 91 234 5678',
+  phoneDisplay: '+251 96 575 9999',
   email: 'info@olljira.com',
-  location: 'Bole, Addis Ababa, Ethiopia',
+  location: 'Summit 72, Addis Ababa, Ethiopia',
 };
 
 export default function ReadyCTA() {

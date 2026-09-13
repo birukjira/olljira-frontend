@@ -20,9 +20,9 @@ const ORG = {
   shortName: 'OllJira',
   email: 'info@olljira.com',
   emailHref: 'mailto:info@olljira.com',
-  phoneDisplay: '+251 91 234 5678',
-  phoneHref: 'tel:+251912345678',
-  location: 'Bole, Addis Ababa, Ethiopia',
+  phoneDisplay: '+251 96 575 9999',
+  phoneHref: 'tel:+251965759999',
+  location: 'Summit 72, Addis Ababa, Ethiopia',
 };
 
 const socials = [
@@ -305,7 +305,7 @@ export default function Contact() {
     <main className="min-h-screen bg-background">
       <Seo
         title="Contact Us"
-        description="Get in touch with OllJira Technology Solution in Bole, Addis Ababa — for network cabling, CCTV, access control, and IT services. Call, email, or send us a message."
+        description="Get in touch with OllJira Technology Solution in Summit 72, Addis Ababa — for network cabling, CCTV, access control, and IT services. Call, email, or send us a message."
       />
       <PageHero title="Contact Us" image="/images/brand/header-network.svg" imageAlt="OllJira network hub artwork" />
 

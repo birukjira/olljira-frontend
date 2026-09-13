@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingContact from './components/FloatingContact';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -62,6 +63,7 @@ export default function App() {
         </Routes>
       </div>
       {!bare && <Footer />}
+      {!bare && <FloatingContact />}
     </div>
   );
 }
