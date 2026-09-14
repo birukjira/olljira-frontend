@@ -728,6 +728,52 @@ function Workflow() {
           <WorkflowStep key={s.stepNumber} {...s} />
         ))}
       </div>
+      <div className="mt-8 rounded-3xl border border-primary/25 bg-primary/5 p-6 md:p-8">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="max-w-md">
+            <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
+              After handover
+            </p>
+            <h3 className="mb-2 font-serif text-xl font-medium tracking-tight text-foreground md:text-2xl">
+              We don&apos;t disappear after the final test report
+            </h3>
+            <p className="text-sm leading-relaxed text-zinc-500">
+              Every installation comes with a 1-year workmanship warranty — and a team that
+              answers the phone.
+            </p>
+          </div>
+          <ul className="grid flex-1 gap-4 sm:grid-cols-2 lg:max-w-2xl">
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} />
+              <span className="text-sm leading-relaxed text-zinc-600">
+                <span className="font-medium text-foreground">1-year workmanship warranty</span>{' '}
+                — a failed run or camera we installed gets fixed free
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Wrench className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} />
+              <span className="text-sm leading-relaxed text-zinc-600">
+                <span className="font-medium text-foreground">Scheduled maintenance</span> —
+                camera cleaning, firmware updates, and rack inspections
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <PhoneCall className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} />
+              <span className="text-sm leading-relaxed text-zinc-600">
+                <span className="font-medium text-foreground">Priority call-outs</span> — when a
+                hospital or hotel system is down, we come the same day
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <CodeXml className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={1.5} />
+              <span className="text-sm leading-relaxed text-zinc-600">
+                <span className="font-medium text-foreground">Software we run for you</span> —
+                updates, backups, and hosting for systems we build
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   );
 }
