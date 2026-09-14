@@ -99,6 +99,25 @@ function ContactInfo() {
               <p>{ORG.location}</p>
             </div>
           </div>
+          <div className="overflow-hidden rounded-xl border border-border shadow-sm">
+            <iframe
+              title="OllJira Technology Solution location — Summit 72, Addis Ababa"
+              src="https://www.google.com/maps?q=Summit,+Addis+Ababa,+Ethiopia&z=15&output=embed"
+              className="h-56 w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Summit,+Addis+Ababa,+Ethiopia"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="flex items-center justify-center gap-2 bg-muted/50 px-4 py-2 text-xs font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              <MapPin className="size-3.5" />
+              Open in Google Maps
+            </a>
+          </div>
           <div className="flex items-start gap-3">
             <span className="mt-0.5">
               <Mail className="size-4 flex-shrink-0 text-muted-foreground" />
