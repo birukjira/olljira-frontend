@@ -15,6 +15,7 @@ import Contact from './pages/Contact';
 import Schedule from './pages/Schedule';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
+import MedinaCaseStudy from './pages/MedinaCaseStudy';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import AdminPosts from './pages/admin/AdminPosts';
@@ -59,6 +60,7 @@ export default function App() {
             <Route path="media" element={<AdminMedia />} />
             <Route path="settings" element={<AdminSettings />} />
           </Route>
+          <Route path="/case-studies/medina-digital-health-platform" element={<MedinaCaseStudy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

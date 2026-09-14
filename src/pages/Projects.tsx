@@ -202,6 +202,26 @@ export default function Projects() {
           <div className="mb-10">
             <TagFilter selectedTagId={selectedTagId} onTagSelect={setSelectedTagId} />
           </div>
+          <Link
+            to="/case-studies/medina-digital-health-platform"
+            className="group mb-10 flex flex-col gap-3 rounded-2xl border border-primary/25 bg-primary/5 p-6 transition-colors hover:bg-primary/10 md:flex-row md:items-center md:justify-between md:p-8"
+          >
+            <div>
+              <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                Featured Case Study
+              </p>
+              <h2 className="mb-1 font-serif text-xl font-medium tracking-tight text-foreground md:text-2xl">
+                Medina Primary Hospital — Full Digital Health Platform
+              </h2>
+              <p className="text-sm text-zinc-500">
+                Website, patient result portal, SMS/Email/Telegram notifications, and the Medina Care app.
+              </p>
+            </div>
+            <span className="inline-flex shrink-0 items-center gap-1 text-sm font-medium text-primary">
+              Read the case study
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </span>
+          </Link>
           {visible.length === 0 ? (
             <div className="py-12 text-center">
               <p className="text-zinc-500">No work samples found</p>
