@@ -54,6 +54,89 @@ export default function AdminSettings() {
       />
 
       <EmailSettings />
+
+      <PasswordSettings />
+    </div>
+  );
+}
+
+function PasswordSettings() {
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
+  const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null);
+
+  const change = trpc.auth.changePassword.useMutation({
+    onSuccess: () => {
+      setMessage({ ok: true, text: 'Password updated. Use it next time you sign in.' });
+      setCurrentPassword('');
+      setNewPassword('');
+      setConfirm('');
+    },
+    onError: (err) => setMessage({ ok: false, text: err.message }),
+  });
+
+  const submit = () => {
+    setMessage(null);
+    if (newPassword.length < 8) {
+      setMessage({ ok: false, text: 'New password must be at least 8 characters.' });
+      return;
+    }
+    if (newPassword !== confirm) {
+      setMessage({ ok: false, text: 'New passwords do not match.' });
+      return;
+    }
+    change.mutate({ currentPassword, newPassword });
+  };
+
+  return (
+    <div className="mt-8">
+      <h2 className="mb-2 font-serif text-xl font-bold text-foreground">Change Password</h2>
+      <p className="mb-4 text-sm text-muted-foreground">
+        Changes the password for the account you are currently signed in with.
+      </p>
+      <div className="space-y-5 rounded-xl border border-border bg-background p-6">
+        <Field label="Current password">
+          <input
+            className={adminInput}
+            type="password"
+            autoComplete="current-password"
+            value={currentPassword}
+            onChange={(e) => setCurrentPassword(e.target.value)}
+          />
+        </Field>
+        <Field label="New password" hint="At least 8 characters.">
+          <input
+            className={adminInput}
+            type="password"
+            autoComplete="new-password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
+          />
+        </Field>
+        <Field label="Confirm new password">
+          <input
+            className={adminInput}
+            type="password"
+            autoComplete="new-password"
+            value={confirm}
+            onChange={(e) => setConfirm(e.target.value)}
+          />
+        </Field>
+        {message && (
+          <p className={`text-sm ${message.ok ? 'text-green-600' : 'text-red-600'}`}>
+            {message.text}
+          </p>
+        )}
+        <button
+          type="button"
+          onClick={submit}
+          disabled={change.isPending || !currentPassword || !newPassword || !confirm}
+          className="rounded-full bg-primary px-6 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:opacity-50"
+        >
+          {change.isPending ? 'Updating…' : 'Update Password'}
+        </button>
+      </div>
     </div>
   );
 }
